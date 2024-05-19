@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("org.flywaydb.flyway") version "10.13.0"
 }
 
 group = "org.example"
@@ -9,11 +10,13 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
 
     implementation("com.h2database:h2:2.2.224")
     implementation("org.slf4j:slf4j-api:2.1.0-alpha1")
     implementation("ch.qos.logback:logback-classic:1.5.6")
+    implementation ("org.flywaydb:flyway-core:10.13.0")
     testImplementation(platform("org.junit:junit-bom:5.10.2"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
